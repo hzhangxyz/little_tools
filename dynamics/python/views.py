@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request
 from tools import tools
 import sys, StringIO
 
