@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request
 from tools import tools
 import sys, os
 
@@ -15,8 +15,8 @@ def c():
                 try:
                         os.system("gcc /tmp/tOoLs/%s.c -o /tmp/tOoLs/%s 1>>/tmp/tOoLs/%s.out 2>>/tmp/tOoLs/%s.out"%(name,name,name,name))
                         os.system("/tmp/tOoLs/%s 1>>/tmp/tOoLs/%s.out 2>>/tmp/tOoLs/%s.out"%(name,name,name))
-                except:
-                        pass
+                except Exception,e:
+                        return e.__repr__()
                 file=open("/tmp/tOoLs/%s.out"%name,"r")
                 ans=file.read()
                 file.close()
