@@ -1,8 +1,10 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/static/python/python.css">
-    <script src="/static/python/python.js"></script>
     <title>PyThOn</title>
+    <meta name="viewport" content="user-scalable=no"></meta>
+    <link rel="stylesheet" type="text/css" href="/static/python/python.css">
+    <style id="size"></style>
+    <script src="/static/python/python.js"></script>
   </head>
   <body>
     <p class=i1 onclick="getElementById('in').focus()">
@@ -14,7 +16,7 @@
 		onMouseOver="this.style.borderColor='white'"
 		>print("hello world")</textarea>
     </p>
-    <button onclick=run()>run</button>
+    <button class=b onclick=run()>run</button>
     <p class=o1 onclick="getElementById('out').focus()">
       <span class=o3 align="center">=</span>
       <textarea class=o2 id=out readonly="readonly"
