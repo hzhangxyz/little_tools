@@ -1,6 +1,8 @@
 from tools import tools
-from flask import render_template
 
 @tools.route('/js')
 def js():
-	return render_template("js/js.html")
+	file=open("static/js/js.html","r")
+	data=file.read()
+	file.close()
+	return data
