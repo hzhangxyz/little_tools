@@ -41,7 +41,8 @@
     border: 2px dotted white;
     border-radius: 5px;
     font-weight: bold;
-    width: 50%;
-    margin-left: 15%;
+    width: 97%;
+    margin: 0;
+    padding: 0;
     background-color: #fff8b1;
 }
