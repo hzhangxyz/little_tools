@@ -46,21 +46,21 @@ mak=function(n){
     p.align="center"
     p.innerHTML='\
 <p class=i1 onclick="getElementById(\'i\'+'+n+').focus()">\
-<span class=i3 align="center">></span>\
-<input class=i2 id=i'+n+'\
-onkeydown="return pre('+n+',event)"\
-onfocus="this.select()"\
-onMouseOver="this.style.borderColor=\'#55CBDA\'"\
+<span class=i3 align="center">>>></span>\
+<textarea class=i2 id=i'+n+' \
+onkeydown="return pre('+n+',event)" \
+onfocus="this.select()" \
+onMouseOver="this.style.borderColor=\'#55CBDA\'" \
 onMouseOut="this.style.borderColor=\'white\'">\
-</input>\
+</textarea>\
 </p>\
 <p class=o1 onclick="getElementById(\'o\'+'+n+').focus()">\
-<span class=o3 align="center">=</span>\
-<input class=o2 id=o'+n+' readonly="readonly"\
-onfocus="this.select()"\
-onMouseOver="this.style.borderColor=\'#4BE28A\'"\
+<span class=o3 align="center">===</span>\
+<textarea class=o2 id=o'+n+' readonly="readonly" \
+onfocus="this.select()" \
+onMouseOver="this.style.borderColor=\'#4BE28A\'" \
 onMouseOut="this.style.borderColor=\'white\'">\
-</input>\
+</textarea>\
 </p>'
     document.body.appendChild(p)
 }
