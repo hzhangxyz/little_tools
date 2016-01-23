@@ -13,12 +13,15 @@
 				else
 					return false
 			}
-			pre=function(n,k){
+			pre=function(n,p){
 				var t=-1
+			        k=p.keyCode
 				if(k==13){
-					if(cal(n)){
-						if(n==s)mak(++s)
-						t=s
+				        if(p.shiftKey){
+					        if(cal(n)){
+						        if(n==s)mak(++s)
+    						        t=s
+						}
 					}
 				}
 				else if(k==38)
@@ -45,7 +48,7 @@
 					<p class=i1 onclick="getElementById(\'i\'+'+n+').focus()">\
 						<span class=i3 align="center">></span>\
 						<input class=i2 id=i'+n+'\
-							onkeydown="return pre('+n+',event.keyCode)"\
+							onkeydown="return pre('+n+',event)"\
 							onfocus="this.select()"\
 							onMouseOver="this.style.borderColor=\'#55CBDA\'"\
 							onMouseOut="this.style.borderColor=\'white\'">\
