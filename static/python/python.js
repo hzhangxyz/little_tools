@@ -5,3 +5,10 @@ run=function(){
     document.getElementById("out").value=xmlHttp.responseText;
     return true
 }
+pre=function(e){
+    if((e.keyCode==13)&&(e.shiftKey)){
+	run()
+	return false
+    }
+    return true
+}

@@ -17,7 +17,7 @@ pre=function(n,p){
     var t=-1
     k=p.keyCode
     if(k==13){
-	if(p.shiftKey){
+	if(p.shiftKey||false==IsPC()){
 	    if(cal(n)){
 		if(n==s)mak(++s)
     		t=s
@@ -46,7 +46,7 @@ mak=function(n){
     p.align="center"
     p.innerHTML='\
 <p class=i1 onclick="getElementById(\'i\'+'+n+').focus()">\
-<span class=i3 align="center">>>></span>\
+<span class=i3 align="center">></span>\
 <textarea class=i2 id=i'+n+' \
 onkeydown="return pre('+n+',event)" \
 onfocus="this.select()" \
@@ -55,7 +55,7 @@ onMouseOut="this.style.borderColor=\'white\'">\
 </textarea>\
 </p>\
 <p class=o1 onclick="getElementById(\'o\'+'+n+').focus()">\
-<span class=o3 align="center">===</span>\
+<span class=o3 align="center">=</span>\
 <textarea class=o2 id=o'+n+' readonly="readonly" \
 onfocus="this.select()" \
 onMouseOver="this.style.borderColor=\'#4BE28A\'" \
@@ -74,3 +74,10 @@ cal=function(n){
     else
 	return false
 }
+if(IsPC()){
+    document.getElementById("size").innerHTML=".i1{font-size: 100%;}.o1{font-size: 100%;}"
+}
+else {
+    document.getElementById("size").innerHTML=".i1{font-size: 500%;}.o1{font-size: 500%;}"
+}
+

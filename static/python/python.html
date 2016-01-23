@@ -1,11 +1,27 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="/static/python/python.css">
     <script src="/static/python/python.js"></script>
     <title>PyThOn</title>
   </head>
   <body>
-    <textarea id=in>print("hello world")</textarea>
+    <p class=i1 onclick="getElementById('in').focus()">
+      <span class=i3 align="center">></span>
+      <textarea class=i2 id=in
+		onkeydown="return pre(event)"
+		onfocus="this.select()"
+		onMouseOver="this.style.borderColor='#55CBDA'"
+		onMouseOver="this.style.borderColor='white'"
+		>print("hello world")</textarea>
+    </p>
     <button onclick=run()>run</button>
-    <textarea id=out>hello world</textarea>
+    <p class=o1 onclick="getElementById('out').focus()">
+      <span class=o3 align="center">=</span>
+      <textarea class=o2 id=out readonly="readonly"
+		onfocus="this.select()"
+		onMouseOver="this.style.borderColor='#4BE28A'"
+		onMouseOut="this.style.borderColor='white'"
+		>hello world</textarea>
+    </span>
   </body>
 </html>
