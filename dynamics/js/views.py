@@ -2,7 +2,4 @@ from tools import tools
 
 @tools.route('/js')
 def js():
-	file=open("static/js/js.html","r")
-	data=file.read()
-	file.close()
-	return data
+	return tools.send_static_file("js/js.html")

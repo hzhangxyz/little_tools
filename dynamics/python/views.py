@@ -21,8 +21,5 @@ def python():
                 file.close()
                 return ans
         else:
-                file=open("static/python/python.html","r")
-                data=file.read()
-                file.close()
-                return data
+		return tools.send_static_file("python/python.html")
 

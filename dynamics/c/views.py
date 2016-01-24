@@ -22,8 +22,5 @@ def c():
                 file.close()
                 return ans
         else:
-                file=open("static/c/c.html","r")
-                data=file.read()
-                file.close()
-                return data
+		return tools.send_static_file("c/c.html")
 
