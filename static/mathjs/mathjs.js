@@ -71,3 +71,9 @@
 				else
 					return false
 			}
+			if(IsPC()){
+				document.getElementById("size").innerHTML=".i1{font-size: 100%;}.o1{font-size: 100%;}"
+			}
+			else {
+				document.getElementById("size").innerHTML=".i1{font-size: 500%;}.o1{font-size: 500%;}"
+			}
