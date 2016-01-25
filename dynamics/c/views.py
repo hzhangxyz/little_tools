@@ -14,7 +14,7 @@ def c():
                 os.system("touch /tmp/tOoLs/%s.out"%name)
                 try:
                         os.system("gcc /tmp/tOoLs/%s.c -o /tmp/tOoLs/%s 1>>/tmp/tOoLs/%s.out 2>>/tmp/tOoLs/%s.out"%(name,name,name,name))
-                        os.system("/tmp/tOoLs/%s 1>>/tmp/tOoLs/%s.out 2>>/tmp/tOoLs/%s.out"%(name,name,name))
+                        os.system("/tmp/tOoLs/%s </dev/null 1>>/tmp/tOoLs/%s.out 2>>/tmp/tOoLs/%s.out"%(name,name,name))
                 except Exception,e:
                         return e.__repr__()
                 file=open("/tmp/tOoLs/%s.out"%name,"r")
