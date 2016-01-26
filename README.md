@@ -1,9 +1,9 @@
 #tOoLs
 Online tools for js, python, c or ...
 ##Requirements
-+wget
-+curl
-+docker
++ wget
++ curl
++ docker
 ##Uages
 ###get Dockerfile
 ```
