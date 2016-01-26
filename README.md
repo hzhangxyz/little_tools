@@ -1,6 +1,7 @@
 #tOoLs
 ##Online tools for js, python, c or ...
 ##Uages
+```
 apt-get install curl
 wget -qO- https://get.docker.com/ | sh
 wget https://raw.githubusercontent.com/zh19970205/little_tools/master/Dockerfile
@@ -15,3 +16,4 @@ while((1));do
 		docker run -d -p 80:80 -m 512m --name=tools --cpu-period=50000 --cpu-quota=25000 tools
 	fi
 done;
+```
