@@ -8,7 +8,7 @@ Online tools for js, python, c or ...
 + curl
 + docker
  
-##Uages
+##Sample Uages
 
 ###get Dockerfile
 ```
