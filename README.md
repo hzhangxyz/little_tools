@@ -10,7 +10,7 @@ Online tools for js, python, c or ...
  
 ##Sample Uages
 
-###get Dockerfile
+###get Dockerfile and run.sh
 ```
 wget https://raw.githubusercontent.com/zh19970205/little_tools/master/Dockerfile
 wget https://raw.githubusercontent.com/zh19970205/little_tools/master/run.sh
