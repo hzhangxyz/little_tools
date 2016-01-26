@@ -23,5 +23,5 @@ docker build -t tools .
 
 ###run the server
 ```
-sh run.sh
+bash run.sh
 ```
