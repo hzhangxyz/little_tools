@@ -25,6 +25,7 @@
 			}
 			pre=function(e){
 				window.localStorage.mdtext=document.getElementById("mdtext").value
+				window.localStorage.mdtitle=document.getElementById("mdtitle").value
 				if(e.keyCode==13){
 					if(e.shiftKey){
 						run(0)
@@ -71,7 +72,7 @@
 
 #### online editor
 
-由strapdownjs渲染
+由strapdownjs为渲染
 
 powered by strapdown 
 </textarea>
@@ -84,10 +85,15 @@ powered by strapdown
 				else{
 					window.localStorage.mdtext=document.getElementById("mdtext").value
 				}
+				if(window.localStorage.hasOwnProperty("mdtitle")){
+					document.getElementById("mdtitle").value=window.localStorage.mdtitle
+				}
+				else{
+					window.localStorage.mdtiitle=document.getElementById("mdtitle").value
+				}
 				run(0)
 			</script>
 		</div>
-		<div style="height:1;background-color:#888888;"></div>
 		<p style="padding:5;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
 	</body>
 <html>
