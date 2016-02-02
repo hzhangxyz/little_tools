@@ -71,6 +71,14 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
 culpa qui officia deserunt mollit anim id est laborum.</textarea>
 			<iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:80%;background-color:#f9f9f9;">
 			</iframe>
+			<script>
+				if(window.localStorage.hasOwnProperty("mdtext")){
+					document.getElementById("mdtext").value=window.localStorage.mdtext
+				}
+				else{
+					window.localStorage.mdtext=document.getElementById("mdtext").value
+				}
+			</script>
 		</div>
 		<p style="padding:5;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
 	</body>
