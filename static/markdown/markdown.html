@@ -2,22 +2,25 @@
 	<head>
 		<script>
 			data=function(){
-				return "data:text/html;charset=utf-8,<!DOCTYPE html><html><title>"+
+				return "data:text/html; charset=utf8,<!DOCTYPE html><html><title>"+
 				document.getElementById("mdtitle").value+
 				"</title><xmp theme='"+
 				document.getElementById("mdtheme").value+
 				"' style='display:none;'>"+
-				escape(document.getElementById("mdtext").value)+
+				encodeURIComponent(document.getElementById("mdtext").value)+
 				"</xmp><script src='http://strapdownjs.com/v/0.2/strapdown.js'></sc"+
 				"ript></html>"
 			}
 			run=function(){
-				window.open(data(),"preview")
+				dd=data()
+				window.open(dd,"preview")
 				window.focus()
 				document.getElementById("mdtext").focus()
 			}
 			save=function(){
-				window.open(data(),"save").focus()
+				dd=data()
+				win=window.open(dd,"save")
+				win.focus()
 			}
 			pre=function(e){
 				window.localStorage.mdtext=document.getElementById("mdtext").value
@@ -31,15 +34,14 @@
 						return false
 					}
 				}
-				run()
 				return true
 			}
 		</script>
 	</head>
-	<body style="margin:0;padding:0;background-color:#f0f0f0;"  onkeydown="return pre(event)">
+	<body style="margin:0;padding:0;background-color:#f0f0f0;"  onkeydown="return pre(event)" onkeyup="run()">
 		<div style="margin:0;padding:0;background-color:#fdfdfd;width:100%;">
 			<div style="padding:8">
-				<input id=mdtitle value="Hello Strapdown"></input>
+				<input id=mdtitle value="Hello Markdown"></input>
 				<select id=mdtheme onchange="run()">
 					<option value="amelia">amelia</option>
 					<option value="cerulean">cerulean</option>
@@ -53,26 +55,22 @@
 					<option value="superhero">superhero</option>
 					<option value="united" selected="selected">united</option>
 				</select>
-				<!--!<button onclick=run()>render</button>!-->
+				<button onclick=run()>render</button>
 				<button onclick=save()>save</button>
 			</div>
 		</div>
 		<div style="height:1;background-color:#888888;"></div>
 		<div style="height:80%">
 			<textarea id=mdtext style="width:50%;border:0;padding:10;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;">
-# Markdown text goes in here
+# Markdown 在线编辑器
+### Markdown online editor
 
-## Chapter 1
+## 在线编辑器
+#### online editor
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. 
-
-## Chapter 2
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.</textarea>
+由strapdownjs为渲染
+powered by strapdown
+</textarea>
 			<iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:80%;background-color:#f9f9f9;">
 			</iframe>
 			<script>
