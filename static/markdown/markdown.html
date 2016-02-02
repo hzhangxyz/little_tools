@@ -18,6 +18,7 @@
 				window.open(data(),"save")
 			}
 			pre=function(e){
+				window.localStorage.mdtext=document.getElementById("mdtext").value
 				if(e.keyCode==13){
 					if(e.shiftKey){
 						run()
