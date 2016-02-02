@@ -13,13 +13,14 @@
 			}
 			run=function(){
 				window.open(data(),"preview")
+				window.focus()
+				document.getElementById("mdtext").focus()
 			}
 			save=function(){
 				window.open(data(),"save")
 			}
 			pre=function(e){
 				window.localStorage.mdtext=document.getElementById("mdtext").value
-				run()
 				if(e.keyCode==13){
 					if(e.shiftKey){
 						run()
@@ -30,6 +31,7 @@
 						return false
 					}
 				}
+				run()
 				return true
 			}
 		</script>
@@ -51,7 +53,7 @@
 					<option value="superhero">superhero</option>
 					<option value="united" selected="selected">united</option>
 				</select>
-				<!--<button onclick=run()>render</button>-->
+				<!--!<button onclick=run()>render</button>!-->
 				<button onclick=save()>save</button>
 			</div>
 		</div>
