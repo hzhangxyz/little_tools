@@ -36,6 +36,7 @@
             pre=function(e){
                 window.localStorage.mdtext=document.getElementById("mdtext").value
                 window.localStorage.mdtitle=document.getElementById("mdtitle").value
+                window.localStorage.mdtheme=document.getElementById("mdtheme").value
                 if(e.keyCode==13){
                     if(e.shiftKey){
                         run(0)
@@ -100,6 +101,12 @@ powered by strapdown
                 }
                 else{
                     window.localStorage.mdtitle=document.getElementById("mdtitle").value
+                }
+                if(window.localStorage.hasOwnProperty("mdtheme")){
+                    document.getElementById("mdtheme").value=window.localStorage.mdtheme
+                }
+                else{
+                    window.localStorage.mdtheme=document.getElementById("mdtheme").value
                 }
                 run(0)
             </script>
