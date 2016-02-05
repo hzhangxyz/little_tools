@@ -7,6 +7,9 @@
         <link rel="shortcut icon" href="/static/bf.jpeg" >
         <meta name="viewport" content="user-scalable=no"></meta>
         <script>
+            window.localStorage.mdtext=document.getElementById("mdtext").value
+            window.localStorage.mdtitle=document.getElementById("mdtitle").value
+            window.localStorage.mdtheme=document.getElementById("mdtheme").value
             data=function(){
                 return "data:text/html; charset=utf8,<!DOCTYPE html><html><title>"+
                 document.getElementById("mdtitle").value+
@@ -34,9 +37,6 @@
                 win.focus()
             }
             pre=function(e){
-                window.localStorage.mdtext=document.getElementById("mdtext").value
-                window.localStorage.mdtitle=document.getElementById("mdtitle").value
-                window.localStorage.mdtheme=document.getElementById("mdtheme").value
                 if(e.keyCode==13){
                     if(e.shiftKey){
                         run(0)
