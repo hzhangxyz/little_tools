@@ -73,9 +73,8 @@
             </div>
         </div>
         <div style="height:1px;background-color:#888888;"></div>
-        <div style="height:80%;">
-            <div style="width:50%;border:0;padding:0;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;">
-                <textarea id=mdtext style="width:96%;border:0;padding:2%;margin:0;height:96%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
+        <div>
+            <textarea id=mdtext style="width:50%;border:0;margin:0;padding:0;height:90%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
 # Markdown 在线编辑器
 
 ### Markdown online editor
@@ -88,8 +87,7 @@
 
 powered by strapdown 
 </textarea>
-            </div>
-            <iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:80%;background-color:#f9f9f9;">
+            <iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:90%;background-color:#f9f9f9;">
             </iframe>
             <script>
                 if(window.localStorage.hasOwnProperty("mdtext")){
@@ -113,6 +111,6 @@ powered by strapdown
                 run(0)
             </script>
         </div>
-        <p style="padding:5px;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
+        <!--<p style="padding:5px;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>-->
     </body>
 <html>
