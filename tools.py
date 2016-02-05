@@ -15,7 +15,7 @@ def js():
 @tools.route("/python")
 def python():
         if "run" in request.args.keys():
-                src=request.args["run"]
+                src=str(request.args["run"])
                 name="n%s"%str(hash(src))
                 inp=open('/tmp/tOoLs/%s.py'%name,'w')
                 inp.write(src)
@@ -36,7 +36,7 @@ def python():
 @tools.route("/c")
 def c():
         if "run" in request.args.keys():
-                src=request.args["run"]
+                src=str(request.args["run"])
                 name="n%s"%str(hash(src))
                 inp=open('/tmp/tOoLs/%s.c'%name,'w')
                 inp.write(src)
