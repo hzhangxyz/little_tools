@@ -52,7 +52,7 @@
         </script>
     </head>
     <body style="margin:0;padding:0;background-color:#f0f0f0;">
-        <div style="margin:0;padding:0;background-color:#fdfdfd;width:100%;">
+        <div id=header style="margin:0;padding:0;background-color:#fdfdfd;width:100%;">
             <div style="padding:8px;">
                 <input id=mdtitle value="Hello Markdown" onkeydown="return pre(event)" onkeyup="run(1)"></input>
                 <select id=mdtheme onchange="run(0)">
@@ -87,7 +87,7 @@
 
 powered by strapdown 
 </textarea>
-            <iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:90%;background-color:#f9f9f9;">
+            <iframe id=pre name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:90%;background-color:#f9f9f9;">
             </iframe>
             <script>
                 if(window.localStorage.hasOwnProperty("mdtext")){
@@ -109,6 +109,22 @@ powered by strapdown
                     window.localStorage.mdtheme=document.getElementById("mdtheme").value
                 }
                 run(0)
+                load=function(){
+                    el=function(x){return document.getElementById(x)}
+                    h=window.innerHeight-el("header").clientHeight-1
+                    tex=el("mdtext")
+                    tex.style.height=h+"px"
+                    el("pre").style.height=h+"px"
+                    w=window.innerWidth/2
+                    tex.style.paddingTop=h*0.02+"px"
+                    tex.style.paddingBottom=h*0.02+"px"
+                    tex.style.paddingLeft=w*0.02+"px"
+                    tex.style.paddingRight=w*0.02+"px"
+                    tex.style.height=h*0.96+"px"
+                    tex.style.width=w*0.96+"px"
+                }
+                load()
+                window.onresize=load
             </script>
         </div>
         <!--<p style="padding:5px;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>-->
