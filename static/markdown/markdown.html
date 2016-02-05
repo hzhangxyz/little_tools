@@ -8,7 +8,11 @@
 				document.getElementById("mdtheme").value+
 				"' style='display:none;'>"+
 				encodeURIComponent(document.getElementById("mdtext").value)+
-				"</xmp><script src='http://strapdownjs.com/v/0.2/strapdown.js'></sc"+
+				"</xmp><script type='text/x-mathjax-config'>"+
+  				"MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</sc"+
+  				"ript><script type='text/javascript' async "+
+  				"src=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML></sc"+
+  				"ript><script src='http://strapdownjs.com/v/0.2/strapdown.js'></sc"+
 				"ript></html>"
 			}
 			run=function(x){
