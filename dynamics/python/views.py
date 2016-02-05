@@ -21,5 +21,5 @@ def python():
                 file.close()
                 return ans
         else:
-		return tools.send_static_file("python/python.html")
+                return tools.send_static_file("python/python.html")
 

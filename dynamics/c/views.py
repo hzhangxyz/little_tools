@@ -6,8 +6,8 @@ import sys, os
 def c():
         if "run" in request.args.keys():
                 src=request.args["run"]
-		name="n%s"%str(hash(src))
-		inp=open('/tmp/tOoLs/%s.c'%name,'w')
+                name="n%s"%str(hash(src))
+                inp=open('/tmp/tOoLs/%s.c'%name,'w')
                 inp.write(src)
                 inp.close()
                 os.system("rm /tmp/tOoLs/%s.out"%name)
@@ -22,5 +22,5 @@ def c():
                 file.close()
                 return ans
         else:
-		return tools.send_static_file("c/c.html")
+                return tools.send_static_file("c/c.html")
 

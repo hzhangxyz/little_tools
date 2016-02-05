@@ -1,76 +1,76 @@
 <html>
-	<head>
-		<title>MaRkDoWn</title>
-		<link rel="shortcut icon" href="/static/index/bf.jpeg" >
-		<meta name="viewport" content="user-scalable=no"></meta>
-		<script>
-			data=function(){
-				return "data:text/html; charset=utf8,<!DOCTYPE html><html><title>"+
-				document.getElementById("mdtitle").value+
-				"</title><xmp theme='"+
-				document.getElementById("mdtheme").value+
-				"' style='display:none;'>"+
-				encodeURIComponent(document.getElementById("mdtext").value)+
-				"</xmp><script type='text/x-mathjax-config'>"+
-  				"MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</sc"+
-  				"ript><script type='text/javascript' async "+
-  				"src=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML></sc"+
-  				"ript><script src='http://strapdownjs.com/v/0.2/strapdown.js'></sc"+
-				"ript></html>"
-			}
-			run=function(x){
-				dd=data()
-				window.open(dd,"preview")
-				window.focus()
-				if(x==0)document.getElementById("mdtext").focus()
-				else document.getElementById("mdtitle").focus()
-			}
-			save=function(){
-				dd=data()
-				win=window.open(dd,"save")
-				win.focus()
-			}
-			pre=function(e){
-				window.localStorage.mdtext=document.getElementById("mdtext").value
-				window.localStorage.mdtitle=document.getElementById("mdtitle").value
-				if(e.keyCode==13){
-					if(e.shiftKey){
-						run(0)
-						return false
-					}
-					if(e.ctrlKey){
-						save()
-						return false
-					}
-				}
-				return true
-			}
-		</script>
-	</head>
-	<body style="margin:0;padding:0;background-color:#f0f0f0;">
-		<div style="margin:0;padding:0;background-color:#fdfdfd;width:100%;">
-			<div style="padding:8">
-				<input id=mdtitle value="Hello Markdown" onkeydown="return pre(event)" onkeyup="run(1)"></input>
-				<select id=mdtheme onchange="run(0)">
-					<option value="amelia">amelia</option>
-					<option value="cerulean">cerulean</option>
-					<option value="cyborg">cyborg</option>
-					<option value="journal">journal</option>
-					<option value="readable">readable</option>
-					<option value="simplex">simplex</option>
-					<option value="slate">slate</option>
-					<option value="spacelab">spacelab</option>
-					<option value="spruce">spruce</option>
-					<option value="superhero">superhero</option>
-					<option value="united" selected="selected">united</option>
-				</select>
-				<button onclick=run(0)>render</button>
-				<button onclick=save()>save</button>
-			</div>
-		</div>
-		<div style="height:1;background-color:#888888;"></div>
-		<div style="height:80%">
-			<textarea id=mdtext style="width:50%;border:0;padding:10;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
+    <head>
+        <title>MaRkDoWn</title>
+        <link rel="shortcut icon" href="/static/index/bf.jpeg" >
+        <meta name="viewport" content="user-scalable=no"></meta>
+        <script>
+            data=function(){
+                return "data:text/html; charset=utf8,<!DOCTYPE html><html><title>"+
+                document.getElementById("mdtitle").value+
+                "</title><xmp theme='"+
+                document.getElementById("mdtheme").value+
+                "' style='display:none;'>"+
+                encodeURIComponent(document.getElementById("mdtext").value)+
+                "</xmp><script type='text/x-mathjax-config'>"+
+                    "MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</sc"+
+                    "ript><script type='text/javascript' async "+
+                    "src=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML></sc"+
+                    "ript><script src='http://strapdownjs.com/v/0.2/strapdown.js'></sc"+
+                "ript></html>"
+            }
+            run=function(x){
+                dd=data()
+                window.open(dd,"preview")
+                window.focus()
+                if(x==0)document.getElementById("mdtext").focus()
+                else document.getElementById("mdtitle").focus()
+            }
+            save=function(){
+                dd=data()
+                win=window.open(dd,"save")
+                win.focus()
+            }
+            pre=function(e){
+                window.localStorage.mdtext=document.getElementById("mdtext").value
+                window.localStorage.mdtitle=document.getElementById("mdtitle").value
+                if(e.keyCode==13){
+                    if(e.shiftKey){
+                        run(0)
+                        return false
+                    }
+                    if(e.ctrlKey){
+                        save()
+                        return false
+                    }
+                }
+                return true
+            }
+        </script>
+    </head>
+    <body style="margin:0;padding:0;background-color:#f0f0f0;">
+        <div style="margin:0;padding:0;background-color:#fdfdfd;width:100%;">
+            <div style="padding:8">
+                <input id=mdtitle value="Hello Markdown" onkeydown="return pre(event)" onkeyup="run(1)"></input>
+                <select id=mdtheme onchange="run(0)">
+                    <option value="amelia">amelia</option>
+                    <option value="cerulean">cerulean</option>
+                    <option value="cyborg">cyborg</option>
+                    <option value="journal">journal</option>
+                    <option value="readable">readable</option>
+                    <option value="simplex">simplex</option>
+                    <option value="slate">slate</option>
+                    <option value="spacelab">spacelab</option>
+                    <option value="spruce">spruce</option>
+                    <option value="superhero">superhero</option>
+                    <option value="united" selected="selected">united</option>
+                </select>
+                <button onclick=run(0)>render</button>
+                <button onclick=save()>save</button>
+            </div>
+        </div>
+        <div style="height:1;background-color:#888888;"></div>
+        <div style="height:80%">
+            <textarea id=mdtext style="width:50%;border:0;padding:10;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
 # Markdown 在线编辑器
 
 ### Markdown online editor
@@ -83,24 +83,24 @@
 
 powered by strapdown 
 </textarea>
-			<iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:80%;background-color:#f9f9f9;">
-			</iframe>
-			<script>
-				if(window.localStorage.hasOwnProperty("mdtext")){
-					document.getElementById("mdtext").value=window.localStorage.mdtext
-				}
-				else{
-					window.localStorage.mdtext=document.getElementById("mdtext").value
-				}
-				if(window.localStorage.hasOwnProperty("mdtitle")){
-					document.getElementById("mdtitle").value=window.localStorage.mdtitle
-				}
-				else{
-					window.localStorage.mdtitle=document.getElementById("mdtitle").value
-				}
-				run(0)
-			</script>
-		</div>
-		<p style="padding:5;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
-	</body>
+            <iframe name=preview style="padding:0;border:0;width:50%;position:absolute;left:50%;height:80%;background-color:#f9f9f9;">
+            </iframe>
+            <script>
+                if(window.localStorage.hasOwnProperty("mdtext")){
+                    document.getElementById("mdtext").value=window.localStorage.mdtext
+                }
+                else{
+                    window.localStorage.mdtext=document.getElementById("mdtext").value
+                }
+                if(window.localStorage.hasOwnProperty("mdtitle")){
+                    document.getElementById("mdtitle").value=window.localStorage.mdtitle
+                }
+                else{
+                    window.localStorage.mdtitle=document.getElementById("mdtitle").value
+                }
+                run(0)
+            </script>
+        </div>
+        <p style="padding:5;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
+    </body>
 <html>
