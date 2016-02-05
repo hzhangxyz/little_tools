@@ -7,10 +7,10 @@
         <link rel="shortcut icon" href="/static/bf.jpeg" >
         <meta name="viewport" content="user-scalable=no"></meta>
         <script>
-            window.localStorage.mdtext=document.getElementById("mdtext").value
-            window.localStorage.mdtitle=document.getElementById("mdtitle").value
-            window.localStorage.mdtheme=document.getElementById("mdtheme").value
             data=function(){
+                window.localStorage.mdtext=document.getElementById("mdtext").value
+                window.localStorage.mdtitle=document.getElementById("mdtitle").value
+                window.localStorage.mdtheme=document.getElementById("mdtheme").value
                 return "data:text/html; charset=utf8,<!DOCTYPE html><html><title>"+
                 document.getElementById("mdtitle").value+
                 "</title><xmp theme='"+
@@ -73,8 +73,8 @@
             </div>
         </div>
         <div style="height:1px;background-color:#888888;"></div>
-        <div style="height:80%">
-            <textarea id=mdtext style="width:50%;border:0;padding:10px;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
+        <div style="height:80%;">
+            <textarea id=mdtext style="width:50%;border:0;padding:0;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
 # Markdown 在线编辑器
 
 ### Markdown online editor
