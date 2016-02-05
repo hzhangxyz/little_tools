@@ -52,7 +52,7 @@
     </head>
     <body style="margin:0;padding:0;background-color:#f0f0f0;">
         <div style="margin:0;padding:0;background-color:#fdfdfd;width:100%;">
-            <div style="padding:8px">
+            <div style="padding:8">
                 <input id=mdtitle value="Hello Markdown" onkeydown="return pre(event)" onkeyup="run(1)"></input>
                 <select id=mdtheme onchange="run(0)">
                     <option value="amelia">amelia</option>
@@ -71,7 +71,7 @@
                 <button onclick=save()>save</button>
             </div>
         </div>
-        <div style="height:1px;background-color:#888888;"></div>
+        <div style="height:1;background-color:#888888;"></div>
         <div style="height:80%">
             <textarea id=mdtext style="width:50%;border:0;padding:10;margin:0;height:80%;resize:none;background-color:#f9f9f9;position:absolute;left:0;" onkeydown="return pre(event)" onkeyup="run(0)">
 # Markdown 在线编辑器
@@ -82,7 +82,7 @@
 
 #### online editor
 
-由strapdownjs为渲染
+由strapdownjs渲染
 
 powered by strapdown 
 </textarea>
@@ -104,6 +104,6 @@ powered by strapdown
                 run(0)
             </script>
         </div>
-        <p style="padding:5px;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
+        <p style="padding:5;margin:0;">powered by <a target="_blank" href="http://strapdownjs.com/">strapdown</a></p>
     </body>
 <html>
