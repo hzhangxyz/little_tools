@@ -1,4 +1,5 @@
 NAME=`docker run -d -p 80:80 -m 512m --cpu-period=50000 --cpu-quota=5000 tools`
+sleep 5
 while((1));do
 	sleep 1
 	OK=NOT
@@ -6,5 +7,6 @@ while((1));do
 	if [ $OK != OKOK ] ; then
 		docker kill $NAME &
 		NAME=`docker run -d -p 80:80 -m 512m --cpu-period=50000 --cpu-quota=5000 tools`
+		sleep 5
 	fi
 done;
